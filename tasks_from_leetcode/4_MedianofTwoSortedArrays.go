@@ -4,7 +4,7 @@ import (
 	"sort"
 )
 
-func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
+func FindMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	nums := append(nums1, nums2...)
 	sort.Ints(nums)
 	length := len(nums)
