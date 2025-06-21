@@ -11,17 +11,17 @@ func myAtoi(s string) int {
 
 	num, err := strconv.Atoi(s)
 	if err != nil {
-		last_num := len(s)
+		lastNum := len(s)
 		for idx, char := range s {
 			if idx == 0 && (string(char) == "-" || string(char) == "+") {
 				continue
 			}
 			if !strings.Contains("0123456789", string(char)) {
-				last_num = idx
+				lastNum = idx
 				break
 			}
 		}
-		num, _ = strconv.Atoi(s[:last_num])
+		num, _ = strconv.Atoi(s[:lastNum])
 	}
 
 	if v := -math.Pow(2.0, 31.0); float64(num) < v {
